@@ -1,0 +1,417 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/single-blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/single-blog.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="single-blog-body">
+        <div class="nav-link">
+            <div class="nav-link-text">
+                <a href="./homepage.html"><i class="fa-solid fa-house"></i></a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a href="./bloglist.html">Bài viết</a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a class="nav-link--selected" href="">Bí Quyết Chăm Sóc Da Bằng Sản Phẩm Hữu Cơ: Hành Trình Cho Làn Da Khỏe Mạnh Tự Nhiên</a>
+            </div>
+        </div>
+        <div class="single-blog">
+            <div class="single-blog__box">
+                <img src="img/Bí quyết chăm sóc da bằng sản phẩm hữu cơ.png" class="primary_image">
+                <div class="info">
+                    <div>
+                        <i class="fa-solid fa-tag"></i>
+                        Sắc đẹp
+                    </div>
+                    <div class="info-between">
+                        <i class="fa-solid fa-user"></i>
+                        J 97
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-comment"></i>
+                        56 Bình luận
+                    </div>
+                </div>
+                <h1>Bí Quyết Chăm Sóc Da Bằng Sản Phẩm Hữu Cơ: Hành Trình Cho Làn Da Khỏe Mạnh Tự Nhiên</h1>
+                <div class="user-acc">
+                    <i class="fa-solid fa-user user-acc__avatar"></i>
+                    <div>
+                        <p class="user-acc__name">Jack</p>
+                        <p class="user-acc__day-up">30/10/2023 - 3 phút đọc</p>
+                    </div>
+                    <div class="user-acc__social-icon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="blog-content">
+                    <p class="blog-content__intro">Làn da là bức bức tranh nghệ thuật của cơ thể chúng ta, và việc chăm sóc da bằng sản phẩm hữu cơ không chỉ mang lại vẻ đẹp tự nhiên mà còn bảo vệ sức khỏe của chúng ta khỏi các chất hóa học độc hại. Hãy cùng khám phá bí quyết chăm sóc da bằng sản phẩm hữu cơ để có một làn da khỏe mạnh và rạng rỡ.</p>
+                    <p>Mỗi người có loại da khác nhau, và việc hiểu rõ loại da của bạn là bước quan trọng đầu tiên. Da khô, da nhờn, da nhạy cảm - mỗi loại đều đòi hỏi sự chăm sóc đặc biệt.</p> 
+                    <p>Lựa chọn sản phẩm hữu cơ không chứa các hóa chất có thể gây kích ứng da. Sản phẩm từ các thành phần như dầu hạt lanh, nha đam, và dầu hạt jojoba thường là lựa chọn tốt cho mọi loại da.</p>
+                    <p>Dầu hạt hạnh nhân, dầu hạt lanh, hoặc dầu hạt jojoba có thể làm sạch da một cách nhẹ nhàng và giữ cho da mềm mại mà không làm mất cân bằng dầu tự nhiên.</p>
+                    <div class="blog-content__img">
+                        <img src="img/dauhatlanh.jpg" alt="">
+                        <img src="img/daujojoba.jpg" alt="">
+                    </div>
+                    <p>Mặt nạ từ các thành phần như mật ong hữu cơ, nha đam, và bột matcha không chỉ giúp dưỡng ẩm mà còn cung cấp dưỡng chất cần thiết để tái tạo làn da.</p>
+                    <p>Làn da đẹp bắt nguồn từ bên trong. Ăn uống cân đối, giàu vitamin và khoáng chất cùng việc duy trì cơ độ ẩm bằng cách uống đủ nước sẽ giúp làn da của bạn trở nên khỏe mạnh và tươi tắn.</p>
+                    <p>Tác động của tia UV có thể gây tổn thương nặng cho làn da. Sử dụng kem chống nắng hữu cơ giúp bảo vệ làn da khỏi tác động của tia UV mà không gây hại từ các chất hóa học có trong kem chống nắng thông thường.</p>
+                </div>
+                <div class="leave-comment">
+                    <h2>Để lại bình luận</h2>
+                    <div class="leave-comment__flex-box">
+                        <input type="text" placeholder="Họ và tên" class="leave-comment__name">
+                        <input type="text" placeholder="Email" class="leave-comment__email">
+                    </div>
+                    <textarea name="" id="" cols="30" rows="5" class="leave-comment__message" placeholder="Hãy viết bình luận ở đây..."></textarea>
+                    <div class="leave-comment__flex-box2">
+                        <input type="checkbox" class="checkbox">
+                        <p>Lưu thông tin trong lần tới</p>
+                    </div>
+                    <div class="leave-comment__post-btn">Gửi</div>
+                </div>
+                <div class="comments">
+                    <h2>Bình luận</h2>
+                    <div class="comments__list">
+                        <div class="comment">
+                            <i class="fa-solid fa-user comment__avatar"></i>
+                            <div>
+                                <p class="comment__name-day"><span>Annette Black</span> - 30/10/2023</p>
+                                <p class="comment__text">Bài viết rất hữu ích! Mình mới bắt đầu chăm sóc da bằng sản phẩm hữu cơ và thực sự cần những gợi ý như thế này.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-tag">
+                        <div class="comment">
+                            <i class="fa-solid fa-user comment__avatar"></i>
+                            <div>
+                                <p class="comment__name-day"><span>Devon Lane</span> - 30/10/2023</p>
+                                <p class="comment__text">Bài viết rất chi tiết và dễ hiểu. Những hướng dẫn này giúp mình tự tin hơn trong việc chăm sóc da hữu cơ.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-tag">
+                        <div class="comment">
+                            <i class="fa-solid fa-user comment__avatar"></i>
+                            <div>
+                                <p class="comment__name-day"><span>Jane Cooper</span> - 29/10/2023</p>
+                                <p class="comment__text">Mặt nạ từ mật ong và nha đam thực sự là bí quyết cho làn da mềm mại! Cảm ơn bài viết vì đã giới thiệu điều này.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-tag">
+                        <div class="comment">
+                            <i class="fa-solid fa-user comment__avatar"></i>
+                            <div>
+                                <p class="comment__name-day"><span>Jacob Jones</span> - 29/10/2023</p>
+                                <p class="comment__text">Chia sẻ về chế độ ăn uống và uống nước cũng rất quan trọng. Đúng là làn da đẹp bắt nguồn từ lối sống lành mạnh.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-tag">
+                        <div class="comment">
+                            <i class="fa-solid fa-user comment__avatar"></i>
+                            <div>
+                                <p class="comment__name-day"><span>Darrell Steward</span> - 29/10/2023</p>
+                                <p class="comment__text">Mình chưa bao giờ nghĩ đến việc sử dụng kem chống nắng hữu cơ. Sẽ thêm nó vào danh sách mua sắm của mình ngay!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more-btn">Hiển thị thêm</div>
+                </div>
+            </div>
+            <div class="single-blog__filter">
+                <input class="search" placeholder="Tìm kiếm..."></input>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <div class="top-categories">
+                    <div class="top-categories__title">Top Danh Mục</div>
+                    <div>
+                        <span class="category">Trái cây tươi</span>
+                        <span class="quantity">(148)</span>
+                    </div>
+                    <div>
+                        <span class="category">Rau củ</span>
+                        <span class="quantity">(192)</span>
+                    </div>
+                    <div>
+                        <span class="category">Nấu nướng</span>
+                        <span class="quantity">(75)</span>
+                    </div>
+                    <div>
+                        <span class="category">Đồ ăn vặt</span>
+                        <span class="quantity">(62)</span>
+                    </div>
+                    <div>
+                        <span class="category">Đồ uống</span>
+                        <span class="quantity">(56)</span>
+                    </div>
+                    <div>
+                        <span class="category">Sức khỏe</span>
+                        <span class="quantity">(34)</span>
+                    </div>
+                    <div>
+                        <span class="category">Bánh ngọt</span>
+                        <span class="quantity">(12)</span>
+                    </div>
+                </div>
+                <div class="popular-tag">
+                    <div class="popular-tag__title">Tag Phổ Biến</div>
+                    <div class="popular-tag__list">
+                        <span>Vitamin</span>
+                        <span>Ít chất béo</span>
+                        <span>Sắc đẹp</span>
+                        <span>Sức khỏe</span>
+                        <span class="seleted-tag">Hữu cơ</span>
+                        <span>Đồ ăn trưa</span>
+                        <span>Ăn vặt</span>
+                        <span>Món chay</span>
+                        <span>Món khai vị</span>
+                        <span>Món ăn cho trẻ</span>
+                    </div>
+                </div>
+                <div class="recently-added">
+                    <div class="recently-added__title">Đọc Gần Đây</div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/Tai_sao_chon_organic.png" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Tại sao nên chọn sản phẩm hữu cơ?</p>
+                            <p class="recently-added__blog-day">
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                28/10/2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/loi_ich_cua_organic.jpg" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Lợi ích của việc sử dụng sản phẩm hữu cơ cho sức khỏe con người.</p>
+                            <p class="recently-added__blog-day">
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                27/10/2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/lam_dep_bang_organic.jpg" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Bí quyết làm đẹp tự nhiên với sản phẩm hữu cơ.</p>
+                            <p class="recently-added__blog-day"> 
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                25/10/2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <br>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <br>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+</body>
+</html>

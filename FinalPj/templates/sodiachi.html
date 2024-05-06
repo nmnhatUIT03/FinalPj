@@ -1,0 +1,413 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/sodiachi.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="address-body">
+        <div class="nav-link">
+            <div class="nav-link-text">
+                <a href="./homepage.html"><i class="fa-solid fa-house"></i></a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a href="./acc.html">Thông tin cá nhân</a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a class="nav-link--selected" href="">Sổ địa chỉ</a>
+            </div>
+        </div>
+        <div class="user-info-wrapper">
+            <div class="user-info-wrapper__menu">
+                <div class="title">Thông tin cá nhân</div>
+                <div class="list">
+                    <div class="list__item">
+                        <a href="./acc.html">
+                            <i class="list__icon fa-solid fa-address-card"></i>
+                            <span>Tài khoản</span>
+                        </a>
+                    </div>
+                    <div class="list__item selected_item">
+                        <a href="">
+                            <i class="list__icon fa-solid fa-address-book"></i>
+                            <span>Sổ địa chỉ</span>
+                        </a>
+                    </div>
+                    <div class="list__item">
+                        <a href="./orderhistory.html">
+                            <i class="list__icon fa-solid fa-wallet"></i>
+                            <span>Lịch sử đặt hàng</span>
+                        </a>
+                    </div>
+                    <div class="list__item">
+                        <a href="./account wish-list.html">
+                            <i class="list__icon fa-solid fa-heart "></i>
+                            <span>Danh sách yêu thích</span>
+                        </a>
+                    </div>
+                    <div class="list__item">
+                        <a href="./homepage.html">
+                            <i class="list__icon fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="user-info-wrapper__address-book" id="addressbook1">
+                <div class="title">
+                    <div class="mini-title  selected_item">
+                        <i class="fa-solid fa-location-dot mini-title__icon"></i>
+                        Danh sách địa chỉ
+                    </div>
+                    <div class="mini-title" onclick="toggleDiv()" >
+                        <i class="fa-solid fa-map-location mini-title__icon"></i>
+                        Tạo địa chỉ
+                    </div>
+                </div>
+                <div class="address-list">
+                        <div class="address-list__item header">
+                            <div>Họ tên</div>
+                            <div>Địa chỉ</div>
+                            <div>Email</div>
+                            <div>Số điện thoại</div>
+                            <div>Mặc định</div>
+                        </div>
+                        <div class="address-list__item">
+                            <div class="name">Nguyễn Thành Tín</div>
+                            <div>216 Nguyễn Văn Tuôi, Bến Lúc, Long An</div>
+                            <div>tin2810@gmail.com</div>
+                            <div class="phonenum">0833625768</div>
+                            <div class="option">
+                                <input type="radio" name="option"> 
+                            </div>
+                        </div>
+                        <div class="address-list__item">
+                            <div class="name">Trần Minh Huy</div>
+                            <div>192 Đường Củ Chi, Củ Chi, Tp.HCM</div>
+                            <div>huytran@gmail.com</div>
+                            <div class="phonenum">0139189144</div>
+                            <div class="option">
+                                <input type="radio" name="option"  checked="checked"> 
+                            </div>
+                        </div>
+                        <div class="address-list__item">
+                            <div class="name">Lê Đức Nghĩa</div>
+                            <div>81 Phạm Văn Đồng, Thủ Đức, Tp.HCM</div>
+                            <div>ducnghia@gmail.com</div>
+                            <div class="phonenum">0842908253</div>
+                            <div class="option">
+                                <input type="radio" name="option">
+                            </div>
+                        </div>
+                        <div class="address-list__item">
+                            <div class="name">Nguyễn Văn A</div>
+                            <div>123 Đinh Công Tráng, Q1, Tp.HCM</div>
+                            <div>anguyen@gmail.com</div>
+                            <div class="phonenum">0182918291</div>
+                            <div class="option">
+                                <input type="radio" name="option">
+                            </div>
+                        </div>
+                        <div class="address-list__item">
+                            <div class="name">Trần Thị B</div>
+                            <div>456 Phố Đống Đa, Đống Đa, Hà Nội</div>
+                            <div>btran@gmail.com</div>
+                            <div class="phonenum">0985276421</div>
+                            <div class="option">
+                                <input type="radio" name="option">
+                            </div>
+                        </div>
+                        <div class="address-list__next-page">
+                            <a href="#" class="previous disable">&#8249;</a>
+                            <a href="#" class="selected_numpage">1&nbsp;</a>
+                            <a href="#" class="numpage">2</a>
+                            <a href="#" class="numpage">3</a>
+                            <a href="#" class="next enable">&#8250;</a>
+                        </div>
+                </div>
+            </div>
+    
+            <div class="user-info-wrapper__address-book" id="addressbook2">
+                <div class="title">
+                    <div class="mini-title" onclick="toggleDiv()">
+                        <i class="fa-solid fa-location-dot mini-title__icon"></i>
+                        Danh sách địa chỉ
+                    </div>
+                    <div class="mini-title selected_item">
+                        <i class="fa-solid fa-map-location mini-title__icon"></i>
+                        Tạo địa chỉ
+                    </div>
+                </div>
+                <div class="address-create">
+                    <div class="address-create__row">
+                        <div class="data">
+                            Họ và tên: <input type="text" placeholder="Nhập họ và tên">
+                        </div>
+                        <div class="data">
+                            Tỉnh/Thành phố: 
+                            <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn</option>           
+                            </select>
+                        </div>
+                    </div>
+                    <div class="address-create__row">
+                        <div class="data">
+                            Quận/Huyện: 
+                            <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn</option>
+                            </select>
+                        </div>
+                        <div class="data">
+                            Phường xã: 
+                            <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="address-create__row">
+                        <div class="data">
+                            Số nhà/Đường: 
+                        </div>
+                        <div>
+                            <textarea placeholder="Nhập địa chỉ"></textarea>
+                        </div>
+                    </div>
+                    <div class="address-create__row">
+                        <div class="data">
+                            Email: <input type="email" placeholder="Nhập email">
+                        </div>
+                        <div class="data">
+                            Số điện thoại: <input type="tel" placeholder="Nhập số điện thoại">
+                        </div>
+                    </div>
+                    <div class="address-create__row">
+                        <div class="address-create__radio">
+                            Đặt làm địa chỉ mặc định:
+                            <div class="option">
+                                <input type="radio" name="option" id="yes"> 
+                                <label for="yes">Có</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="option" id="no">
+                                <label for="no">Không</label>
+                            </div>
+                        </div>
+                        <div class="address-create__btn">Cập nhật</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <br>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <br>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="./js/sodiachi.js"></script>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+</address-wrapper>
+</html>

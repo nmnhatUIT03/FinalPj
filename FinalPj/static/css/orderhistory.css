@@ -1,0 +1,132 @@
+.user-info-wrapper {
+    display: flex;
+    margin: 30px 0;
+    padding: 0 160px;
+    height: fit-content;
+}
+
+.user-info-wrapper__menu {
+    width: 200px;
+    height: fit-content;
+    border: 2px solid #dbdbdb;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    text-indent: 10px;
+    padding: 10px 0;
+}
+
+.list__item{
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.list__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.list__icon{
+    margin: 0 10px;
+}
+
+.list div:hover {
+    background-color: rgb(223, 239, 223);
+    cursor: pointer;
+}
+
+.selected_item {
+    background-color: rgb(223, 239, 223);
+    border-left: 3px solid var(--primary-color);
+    font-weight: bold;
+}
+
+.user-info-wrapper__order-history {
+    width: 980px;
+    height: fit-content;
+    border: 2px solid #dbdbdb;
+    margin: 10px 0 10px 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.user-info-wrapper__order-history .title{
+    padding: 20px 0;
+    border-bottom: 2px solid #dbdbdb;
+    border-left: 3px solid var(--primary-color);
+}
+
+.title__icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.content__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr 1fr 0.7fr;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.content .header{
+    background-color: #dbdbdb;
+    padding: 5px;
+}
+
+.content__item div {
+    margin: 5px 20px;
+}
+
+.content__item div a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.content__next-page {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content__next-page a {
+    text-decoration: none; 
+    padding: 7px 11px;
+    font-size: 10px;
+    margin: 3px;
+    border-radius: 50%;
+}
+
+.content__next-page .disable {
+    background-color: #dbdbdb;
+    border: 1px solid #dbdbdb;
+    color: gray;
+}
+
+.content__next-page .enable {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    color: black;
+}
+
+.content__next-page .numpage {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+.content__next-page .selected_numpage {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+}
+
+.content__next-page .numpage:hover, .content__next-page .enable:hover {
+    background-color: rgb(223, 239, 223);
+    border: 1px solid rgb(223, 239, 223);
+    color: black;
+}

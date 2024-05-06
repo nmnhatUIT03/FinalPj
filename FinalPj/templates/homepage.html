@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/base.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="slider">
+        <div class="slides">
+            <div class="slide actived">
+              <div class="slide-img">
+                <img id="img" src="./img/slider1 (1).png" alt="">
+              </div>
+              <div class="slide__content">
+                  <div class="text-content">
+                    <p class="text-welcome">Chào mừng đến với Organic Shop</p>
+                    <h1 class="text-heading">Cung cấp thức ăn tươi ngon và tốt cho sức khỏe</h1>
+                    <div class="text-descr">Miễn phí vận chuyển cho tất cả các đơn đặt hàng của bạn</div>
+                  </div>
+                  <button>
+                    Mua sắm ngay
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+              </div>
+            </div>
+            <div class="slide slide1">
+                <div class="slide__content">
+                    <div class="text-content">
+                        <p class="text-welcome">Chào mừng đến với Organic Shop</p>
+                        <h1 class="text-heading">Cung cấp thức ăn tươi ngon và tốt cho sức khỏe</h1>
+                        <div class="text-descr">Miễn phí vận chuyển cho tất cả các đơn đặt hàng của bạn</div>
+                    </div>
+                    <button>
+                        Mua sắm ngay
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="slide-img">
+                  <img id="img" src="./img/slider1 (2).png" alt="">
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="slide-img">
+                  <img id="img" src="./img/slider1.png" alt="">
+                </div>
+                <div class="slide__content">
+                    <div class="text-content">
+                      <p class="text-welcome">Chào mừng đến với Organic Shop</p>
+                      <h1 class="text-heading">Cung cấp thức ăn tươi ngon và tốt cho sức khỏe</h1>
+                      <div class="text-descr">Miễn phí vận chuyển cho tất cả các đơn đặt hàng của bạn</div>
+                    </div>
+                    <button>
+                      Mua sắm ngay
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__interaction">
+            <span id="btn-prev"><i class="fa-solid fa-chevron-left"></i></span>
+            <span id="btn-next"><i class="fa-solid fa-chevron-right"></i></span>
+            <ul>
+                <li class="node--actived"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="homepage__feature">
+        <div class="feature__item">
+            <div class="feature__item__img">
+                <img src="./img/delivery-truck 1.svg" alt="">
+            </div>
+            <div class="feature__item__text">
+                <div class="feature__item__text__heading">Miễn phí vận chuyển</div>
+                <div class="feature__item__text__descrb">Miễn phí vận chuyển tất cả các đơn đặt hàng của bạn</div>
+            </div>
+        </div>
+        <div class="feature__item">
+            <div class="feature__item__img">
+                <img src="./img/headphones 1.svg" alt="">
+            </div>
+            <div class="feature__item__text">
+                <div class="feature__item__text__heading">Hỗ trợ 24/7</div>
+                <div class="feature__item__text__descrb">Luôn sẵn sàng đễ hỗ trợ khách hàng</div>
+            </div>
+        </div>
+        <div class="feature__item">
+            <div class="feature__item__img">
+                <img src="./img/shopping-bag.svg" alt="">
+            </div>
+            <div class="feature__item__text">
+                <div class="feature__item__text__heading">Bảo mật thanh toán 100%</div>
+                <div class="feature__item__text__descrb">Chúng tôi đảm bảo tiền của bạn an toàn</div>
+            </div>
+        </div>
+        <div class="feature__item">
+            <div class="feature__item__img">
+                <img src="./img/package.svg" alt="">
+            </div>
+            <div class="feature__item__text">
+                <div class="feature__item__text__heading">Chính sách hoàn tiền</div>
+                <div class="feature__item__text__descrb">Hoàn tiền trong vòng 30 ngày</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="homepage__line"></div>
+
+    <div class="homepage__category">
+        <div class="homepage__category__header">
+            <h2>Các loại sản phẩm phổ biến</h2>
+            <a href="#" class="">
+                Xem tất cả
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="homepage__category__body">
+            <div class="homepage__category__item">
+                <img src="./img/freshfruit.png" alt="">
+                <p>Trái cây tươi</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/freshvegeta.png" alt="">
+                <p>Rau củ quả</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/meat.png" alt="">
+                <p>Thịt và cá</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/snack.png" alt="">
+                <p>Đồ ăn vặt</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/beve.png" alt="">
+                <p>Nước giải khát</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/beauty.png" alt="">
+                <p>Sản phẩm làm đẹp</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/bread.png" alt="">
+                <p>Bánh và bánh mì</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/baking.png" alt="">
+                <p>Bột làm bánh</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/cooking.png" alt="">
+                <p>Gia vị nấu ăn</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/diabetic.png" alt="">
+                <p>Sản phẩm ít đường</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/dish.png" alt="">
+                <p>Dung dịch rửa chén</p>
+            </div>
+            <div class="homepage__category__item">
+                <img src="./img/oil.png" alt="">
+                <p>Dầu ăn</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="homepage__banner">
+        <h1>Ưu đãi mùa hè <br> lên đến
+            <span>37%</span>
+        </h1>
+        <div class="banner__countdown">
+            <span id="days"></span> ngày
+            <span id="hours"></span> giờ
+            <span id="minutes"></span> phút
+            <span id="seconds"></span> giây
+        </div>
+        <button>
+            Mua sắm ngay
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div class="homepage__popular-products">
+        <div class="homepage__popular-products__header">
+            <h2>Các sản phẩm phổ biến</h2>
+            <a href="#" class="">
+                Xem tất cả
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="homepage__popular-products__body">
+            <div class="homepage__popular-products__item">
+                <img src="./img/Cam.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Cam vàng</p>
+                        <div class="price">
+                            <p class="price-now">50.000 đ</p>
+                            <p class="price-sale">60.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/ot chuong do lon.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Ớt chuông đỏ</p>
+                        <div class="price">
+                            <p class="price-now">20.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/ot chuong lon.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Ớt chuông xanh</p>
+                        <div class="price">
+                            <p class="price-now">20.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/ot xanh lon.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Ớt xanh</p>
+                        <div class="price">
+                            <p class="price-now">10.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star "></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/xoai lon.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Xoài cát</p>
+                        <div class="price">
+                            <p class="price-now">50.000 đ</p>
+                            <p class="price-sale">80.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/ca tim lon.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Cà tím</p>
+                        <div class="price">
+                            <p class="price-now">20.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/bong cai.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Bông cải trắng</p>
+                        <div class="price">
+                            <p class="price-now">30.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/xa lach.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Rau xà lách</p>
+                        <div class="price">
+                            <p class="price-now">20.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/khoai tay.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Khoai tây</p>
+                        <div class="price">
+                            <p class="price-now">50.000 đ</p>
+                            <p class="price-sale">55.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star "></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__popular-products__item">
+                <img src="./img/bap.png" alt="">
+                <div class="popular-products__item__info">
+                    <div class="popular-products__item__info__text">
+                        <p class="name">Bắp nếp</p>
+                        <div class="price">
+                            <p class="price-now">20.000 đ</p>
+                        </div>
+                        <span>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                            <i class="fa-solid fa-star star-actived"></i>
+                        </span>
+                    </div>
+                    <div class="popular-products__item__info__cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-team">
+        <div class="about-team__content">
+            <h1>Đội ngũ của chúng tôi</h1>
+            <p>Gặp gỡ đội ngũ tận tâm đằng sau Organic Shop. Chúng tôi là một nhóm gồm những cá nhân có chung niềm đam mê với các sản phẩm hữu cơ và cam kết cung cấp cho bạn những sản phẩm và dịch vụ tốt nhất có thể.</p>
+        </div>
+        <div class="about-team__members">
+            <i class="fa-solid fa-arrow-left arrow"></i>
+            <div class="about-team__member">
+                <img src="img/huy.jpg" alt="" class="about-team__member-img">
+                <div class="about-team__member-social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="about-team__member-name">Minh Huy Trần</p>
+                <p class="about-team__member-position">CEO & Founder</p>
+            </div>
+            <div class="about-team__member">
+                <img src="img/nghia.jpg" alt="" class="about-team__member-img">
+                <div class="about-team__member-social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="about-team__member-name">Đức Nghĩa</p>
+                <p class="about-team__member-position">Order Manager</p>
+            </div>
+            <div class="about-team__member">
+                <img src="img/tin.jpg" alt="" class="about-team__member-img">
+                <div class="about-team__member-social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="about-team__member-name">Tín Nguyễn</p>
+                <p class="about-team__member-position">Product Manager</p>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow"></i>
+        </div>
+    </div>
+
+    <div class="blog">
+        <h1>Những bài viết gần đây</h1>
+        <div class="blog-cards">
+            <div class="blog-card">
+                <img src="img/Bí quyết chăm sóc da bằng sản phẩm hữu cơ.png" class="blog-card__img">
+                <div class="blog-card__info">
+                    <div>
+                        <i class="fa-solid fa-tag"></i>
+                        Sắc đẹp
+                    </div>
+                    <div class="info-between">
+                        <i class="fa-solid fa-user"></i>
+                        J 97
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-comment"></i>
+                        56 bình luận
+                    </div>
+                </div>
+                <p class="blog-card__title">Bí quyết chăm sóc da bằng sản phẩm hữu cơ.</p>
+                <div class="blog-card__bot">
+                    <p class="blog-card__day"> 
+                        26/10/2023
+                    </p>
+                    <a href="" class="blog-card__read-more">
+                        Đọc thêm
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="img/Thực phẩm hữu cơ Sự lựa chọn tốt cho môi trường.jpg" class="blog-card__img">
+                <div class="blog-card__info">
+                    <div>
+                        <i class="fa-solid fa-tag"></i>
+                        Hữu cơ
+                    </div>
+                    <div class="info-between">
+                        <i class="fa-solid fa-user"></i>
+                        B Ray
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-comment"></i>
+                        37 bình luận
+                    </div>
+                </div>
+                <p class="blog-card__title">Thực phẩm hữu cơ: Sự lựa chọn tốt cho môi trường.</p>
+                <div class="blog-card__bot">
+                    <p class="blog-card__day"> 
+                        30/10/2023
+                    </p>
+                    <a href="" class="blog-card__read-more">
+                        Đọc thêm
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="img/Cách lựa chọn thực phẩm hữu cơ chất lượng.jpg" class="blog-card__img">
+                <div class="blog-card__info">
+                    <div>
+                        <i class="fa-solid fa-tag"></i>
+                        Hữu cơ
+                    </div>
+                    <div class="info-between">
+                        <i class="fa-solid fa-user"></i>
+                        C Only
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-comment"></i>
+                        41 bình luận
+                    </div>
+                </div>
+                <p class="blog-card__title">Cách lựa chọn thực phẩm hữu cơ chất lượng.</p>
+                <div class="blog-card__bot">
+                    <p class="blog-card__day"> 
+                        30/10/2023
+                    </p>
+                    <a href="" class="blog-card__read-more">
+                        Đọc thêm
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="client-testimonail">
+        <div class="client-testimonail__title">
+            <h1>Bình luận của khách hàng</h1>
+            <div>
+                <i class="fa-solid fa-arrow-left arrow"></i>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="client-testimonail__boxs">
+            <div class="client-testimonail__box">
+                <img src="img/Vector.svg" alt="">
+                <p>Sản phẩm tại Organic Shop thực sự là những sản phẩm tuyệt vời! Tôi đã mua một số thực phẩm hữu cơ và chúng đều rất ngon và tươi ngon. Sẽ quay lại mua thêm!</p>
+                <div class="customer-acc">
+                    <i class="fa-solid fa-user customer-acc__avatar"></i>
+                    <div>
+                        <p class="customer-acc__name">Customer 1</p>
+                        <p>Khách hàng</p>
+                    </div>
+                    <div class="customer-acc__rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="client-testimonail__box">
+                <img src="img/Vector.svg" alt="">
+                <p>Dịch vụ khách hàng tại Organic Shop thực sự xuất sắc. Họ luôn sẵn sàng giúp đỡ và trả lời mọi câu hỏi của tôi. </p>
+                <div class="customer-acc">
+                    <i class="fa-solid fa-user customer-acc__avatar"></i>
+                    <div>
+                        <p class="customer-acc__name">Customer 2</p>
+                        <p>Khách hàng</p>
+                    </div>
+                    <div class="customer-acc__rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="client-testimonail__box">
+                <img src="img/Vector.svg" alt="">
+                <p>Tôi đã thử sản phẩm dưỡng da hữu cơ của Organic Shop và kết quả thật sự tuyệt vời. Da tôi trở nên mịn màng và sáng hơn sau khi sử dụng.</p>
+                <div class="customer-acc">
+                    <i class="fa-solid fa-user customer-acc__avatar"></i>
+                    <div>
+                        <p class="customer-acc__name">Customer 3</p>
+                        <p>Khách hàng</p>
+                    </div>
+                    <div class="customer-acc__rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <br>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <br>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/banner_countdown.js"></script>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,665 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/bloglist.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-list-body">
+        <div class="nav-link">
+            <div class="nav-link-text">
+                <a href="./homepage.html"><i class="fa-solid fa-house"></i></a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a class="nav-link--selected" href="">Bài viết</a>
+            </div>
+        </div>
+        <div class="blog-list">
+            <div class="blog-list__filter">
+                <div class="filter-btn">
+                    <i class="fa-solid fa-filter"></i>
+                    &nbsp;Bộ lọc
+                </div>
+                <input class="search" placeholder="Tìm kiếm..."></input>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <div class="top-categories">
+                    <div class="top-categories__title">Top Danh Mục</div>
+                    <div>
+                        <span class="category">Trái cây tươi</span>
+                        <span class="quantity">(148)</span>
+                    </div>
+                    <div>
+                        <span class="category">Rau củ</span>
+                        <span class="quantity">(192)</span>
+                    </div>
+                    <div>
+                        <span class="category">Nấu nướng</span>
+                        <span class="quantity">(75)</span>
+                    </div>
+                    <div>
+                        <span class="category">Đồ ăn vặt</span>
+                        <span class="quantity">(62)</span>
+                    </div>
+                    <div>
+                        <span class="category">Đồ uống</span>
+                        <span class="quantity">(56)</span>
+                    </div>
+                    <div>
+                        <span class="category">Sức khỏe</span>
+                        <span class="quantity">(34)</span>
+                    </div>
+                    <div>
+                        <span class="category">Bánh ngọt</span>
+                        <span class="quantity">(12)</span>
+                    </div>
+                </div>
+                <div class="popular-tag">
+                    <div class="popular-tag__title">Tag Phổ Biến</div>
+                    <div class="popular-tag__list">
+                        <span>Vitamin</span>
+                        <span>Ít chất béo</span>
+                        <span>Sắc đẹp</span>
+                        <span>Sức khỏe</span>
+                        <span class="seleted-tag">Hữu cơ</span>
+                        <span>Đồ ăn trưa</span>
+                        <span>Ăn vặt</span>
+                        <span>Món chay</span>
+                        <span>Món khai vị</span>
+                        <span>Món ăn cho trẻ</span>
+                    </div>
+                </div>
+                <div class="recently-added">
+                    <div class="recently-added__title">Đọc Gần Đây</div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/Tai_sao_chon_organic.png" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Tại sao nên chọn sản phẩm hữu cơ?</p>
+                            <p class="recently-added__blog-day">
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                28/10/2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/loi_ich_cua_organic.jpg" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Lợi ích của việc sử dụng sản phẩm hữu cơ cho sức khỏe con người.</p>
+                            <p class="recently-added__blog-day">
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                27/10/2023
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recently-added__flex-box">
+                        <img src="img/lam_dep_bang_organic.jpg" class="recently-added__blog-img">
+                        <div>
+                            <p class="recently-added__blog-title">Bí quyết làm đẹp tự nhiên với sản phẩm hữu cơ.</p>
+                            <p class="recently-added__blog-day"> 
+                                <i class="fa-solid fa-calendar-day icon-day"></i>
+                                25/10/2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-list__box">
+                <div class="blog-header">
+                    <div class="blog-header__sort-by">
+                        Sắp xếp theo:
+                        <select name="" id="">
+                            <option value="">Mới nhất</option>
+                            <option value="">Xem nhiều nhất</option>
+                            <option value="">Liên quan</option>
+                        </select>
+                    </div>
+                    <div class="blog-header__counter">47 kết quả tìm kiếm</div>
+                </div>
+                <div class="blog-cards">
+                    <div class="blog-card">
+                        <img src="img/Hướng dẫn cách trồng rau hữu cơ tại nhà.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Trồng trọt
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                A Nguyễn
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                63 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Hướng dẫn cách trồng rau hữu cơ tại nhà.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                30/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Thực phẩm hữu cơ Sự lựa chọn tốt cho môi trường.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Hữu cơ
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                B Ray
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                37 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Thực phẩm hữu cơ: Sự lựa chọn tốt cho môi trường.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                30/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Cách lựa chọn thực phẩm hữu cơ chất lượng.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Hữu cơ
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                C Only
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                41 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Cách lựa chọn thực phẩm hữu cơ chất lượng.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                30/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Những thực phẩm hữu cơ tốt cho trẻ em.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Trẻ em
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                D Trần
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                82 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Những thực phẩm hữu cơ tốt cho trẻ em</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                30/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Những cách đổi mới trong ngành công nghiệp hữu cơ Tương lai của nguồn gốc thực phẩm.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Rau củ
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                E Mily
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                26 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Những cách đổi mới trong ngành công nghiệp hữu cơ: Tương lai của nguồn gốc thực phẩm.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                29/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Sáng tạo với thực phẩm hữu cơ Cách nấu món chay ngon.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Món chay
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                F Đỗ
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                54 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Sáng tạo với thực phẩm hữu cơ: Cách nấu món chay ngon.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                29/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Làm thế nào để giảm thiểu rác thải khi mua sản phẩm organic.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Môi trường
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                G Long
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                45 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Làm thế nào để giảm thiểu rác thải khi mua sản phẩm organic.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                28/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Tai_sao_chon_organic.png" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Hữu cơ
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                H Cơ
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                33 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Tại sao nên chọn sản phẩm hữu cơ?</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                28/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/loi_ich_cua_organic.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Sức khỏe
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                I Love U
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                39 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Lợi ích của việc sử dụng sản phẩm hữu cơ cho sức khỏe của bạn.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                27/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card blog-card-js">
+                        <img src="img/Bí quyết chăm sóc da bằng sản phẩm hữu cơ.png" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Sắc đẹp
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                J 97
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                56 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Bí quyết chăm sóc da bằng sản phẩm hữu cơ.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                26/10/2023
+                            </p>
+                            <a href="./single-blog.html" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Phân biệt giữa sản phẩm hữu cơ và sản phẩm xanh.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Hữu cơ
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                K Trần
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                11 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Phân biệt giữa sản phẩm hữu cơ và sản phẩm xanh.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                26/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="img/Thực phẩm hữu cơ và sự gia tăng của chế độ ăn chay.jpg" class="blog-card__img">
+                        <div class="blog-card__info">
+                            <div>
+                                <i class="fa-solid fa-tag"></i>
+                                Món chay
+                            </div>
+                            <div class="info-between">
+                                <i class="fa-solid fa-user"></i>
+                                L Bùi
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-comment"></i>
+                                28 bình luận
+                            </div>
+                        </div>
+                        <p class="blog-card__title">Thực phẩm hữu cơ và sự gia tăng của chế độ ăn chay.</p>
+                        <div class="blog-card__bot">
+                            <p class="blog-card__day"> 
+                                26/10/2023
+                            </p>
+                            <a href="" class="blog-card__read-more">
+                                Đọc thêm
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-box-next-page">
+                    <a href="#" class="previous disable">&#8249;</a>
+                    <a href="#" class="selected_numpage">1</a>
+                    <a href="#" class="numpage">2</a>
+                    <a href="#" class="numpage">3</a>
+                    <a href="#" class="numpage">4</a>
+                    <a href="#">...</a>
+                    <a href="#" class="numpage">12</a>
+                    <a href="#" class="next enable">&#8250;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <br>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <br>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/bloglist.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+</address-wrapper>
+</html>

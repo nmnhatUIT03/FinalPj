@@ -1,0 +1,217 @@
+.user-info-wrapper {
+    display: flex;
+    margin: 30px 0;
+    padding: 0 160px;
+    height: fit-content;
+}
+
+.user-info-wrapper__menu {
+    width: 200px;
+    height: fit-content;
+    border: 1px solid #dbdbdb;
+    margin: 10px 10px 10px 0;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: bold;
+    text-indent: 10px;
+    padding: 10px 0;
+}
+
+.list__item{
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.list__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.list__icon{
+    margin: 0 10px;
+}
+
+.selected_item {
+    background-color: rgb(223, 239, 223);
+    border-left: 3px solid var(--primary-color);
+    font-weight: bold;
+}
+
+.user-info-wrapper__address-book {
+    height: fit-content;
+    width: 980px;
+    border: 1px solid #dbdbdb;
+    margin: 10px 0 10px 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.user-info-wrapper__address-book .title{
+    display: flex;
+    padding: 0;
+}
+
+.mini-title__icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.mini-title{
+    width: 50%;
+    padding: 10px 0;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.list div:hover, .mini-title:hover {
+    background-color: rgb(223, 239, 223);
+    cursor: pointer;
+}
+
+.address-list__item {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr 1fr 0.5fr;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.address-list .header {
+    background-color: #dbdbdb;
+    padding: 5px;
+}
+
+.address-list__item div {
+    margin: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.address-list__item .name{
+    text-align: left;
+    text-indent: 14px;
+}
+
+.address-list__next-page {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.address-list__next-page a {
+    text-decoration: none; 
+    padding: 7px 11px;
+    font-size: 10px;
+    margin: 3px;
+    border-radius: 50%;
+}
+
+.address-list__next-page .disable {
+    background-color: #dbdbdb;
+    border: 1px solid #dbdbdb;
+    color: gray;
+}
+
+.address-list__next-page .enable {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    color: black;
+}
+
+.address-list__next-page .numpage {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+}
+
+.address-list__next-page .selected_numpage {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+}
+
+.address-list__next-page .numpage:hover, 
+.address-list__next-page .enable:hover {
+    background-color: rgb(223, 239, 223);
+    border: 1px solid rgb(223, 239, 223);
+    color: black;
+}
+
+.address-create__row {
+    display: flex;
+}
+
+.address-create__row .data {
+    font-size: 14px;
+    width: 50%;
+    padding: 18px 25px;
+    text-indent: 20px;
+}
+
+.address-create__row .data input,
+.address-create__row .data select {
+    float: right;
+    margin-right: 45px;
+    height: 30px;
+    width: 250px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    position: relative;
+    top: -4px;
+    text-indent: 5px;
+    
+}
+
+.address-create__row textarea {
+    position: relative;
+    height: 100px;
+    width: 740px;
+    border-radius: 4px;
+    outline: none;
+    right: 45px;
+    top: -4px;
+    margin: 25px;
+    border: 1px solid #dbdbdb;
+    text-indent: 5px;
+    padding-top: 10px;
+}
+
+.address-create__radio {
+    font-size: 14px;
+    width: 50%;
+    padding: 25px;
+    text-indent: 20px;
+    display: flex;
+}
+
+.address-create__radio .option {
+    margin-top: 3px;
+}
+
+.address-create__btn {
+    margin: 20px 0 0 270px;
+    color: rgb(223, 239, 223);
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 30px;
+    width: 150px;
+    height: 30px;
+}
+
+.address-create__btn:hover {
+    background-color: rgb(223, 239, 223);
+    cursor: pointer;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+#addressbook2 {
+    display: none;
+}

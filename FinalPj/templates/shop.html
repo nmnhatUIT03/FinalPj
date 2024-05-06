@@ -1,0 +1,514 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    <script src="./js/shop.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="address-body">
+        <div class="nav-link">
+            <div class="nav-link-text">
+                <a href="./homepage.html"><i class="fa-solid fa-house"></i></a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a class="nav-link--selected" href="">Sản phẩm</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Body shop 2-->
+    <div class="body">
+    <div class="filter">
+        <div class="filter-option">
+            <form action=""> 
+                <div style="display: flex; flex-direction: row;">
+                    <select class="filter-option__child">
+                        <option disabled selected>Chọn sản phẩm</option>
+                        <option>Thịt</option>
+                        <option>Hải sản</option>
+                        <option>Rau củ</option>
+                        <option>Trái cây</option>
+                        <option>Lương thực</option>
+                        <option>Sữa, thực phẩm đông mát</option>
+                    </select>
+                    <select class="filter-option__child" id="price_filter">
+                        <option disabled selected>Chọn giá tiền</option>
+                        <option>Ít hơn 50k</option>
+                        <option>Từ 50k đến 100k</option>
+                        <option>Từ 100k đến 200k</option>
+                        <option>Trên 200k</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="filter-option__child filter-option__child--right">
+                        <option disabled selected>Sắp xếp theo</option>
+                        <option>Mới nhất</option>
+                        <option>Đánh giá cao nhất</option>
+                        <option>Khuyến mãi</option>
+                    </select>
+                    <select class="filter-option__child">
+                        <option disabled selected>Hiển thị</option>
+                        <option>10 sản phẩm</option>
+                        <option>20 sản phẩm</option>
+                        <option>30 sản phẩm</option>
+                        <option>Tất cả</option>
+                      </select>
+                </div>
+                
+              </form>
+        </div>
+        <div class="filter-result">
+            <p>Bộ lọc: <span class="filter-result__child">Trái cây</span> <span class="filter-result__child"> Mức giá: 20k</span> <span class="filter-result__child--right"> <span class="filter-result__child">Kết quả: </span> 200 sản phẩm</span></p>
+        </div>
+    </div>
+
+    <div class="collage">
+        <div class="collage-pic">
+            <a href="#"><img src="./img/anhdao.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Anh đào</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/bo.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Bơ</a>
+            <p>Giá: 15.000/quả</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="./chitietsanppham.html"><img src="./img/cam.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Cam</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/chomchom.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Chôm chôm</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/chuoi.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Chuối</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/dao.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Đào</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/dau.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Dâu</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/dua.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Dứa</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/duahau.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Dưa hấu</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/le.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Lê</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/nho.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Nho</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/quyt.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Quýt</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/saurieng.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Sầu riêng</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/tao.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Táo</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/thong.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Quả thông</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+        <div class="collage-pic">
+            <a href="#"><img src="./img/xoai.jpg" alt="" class="collage-pic__img"></a>
+            <a href="#" class="collage-pic__name">Xoài</a>
+            <p>Giá: 20.000/kg</p>
+            <div class="collage-pic__star">
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+            </div>
+            <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+            <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+            <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+    </div>
+
+    <div class="quatrang">
+        <button class="quatrang__button quatrang__button--border">&lt</button>
+        <button class="quatrang__button quatrang--selected">1</button>
+        <button class="quatrang__button">2</button>
+        <button class="quatrang__button">3</button>
+        <button class="quatrang__button">...</button>
+        <button class="quatrang__button">10</button>
+        <button class="quatrang__button quatrang__button--border"><code>></code></button>   
+    </div> 
+    </div>
+    <dialog id="preview_popup">
+        <form class="preview_popup__esc" method="dialog">
+            <button>X</button>
+        </form>
+        <div class="previewport">
+            <div class="preview_gallery">
+            <button><i class="fa-solid fa-chevron-up"></i></button>
+            <button><img src="./img/cam.jpg" alt="" class="preview_gallery__pic selected"></button>
+            <button><img src="./img/matcattraicam2.jpg" alt="" class="preview_gallery__pic"></button>
+            <button><img src="./img/traicambirdeyeview.png" alt="" class="preview_gallery__pic"></button>
+            <button><img src="./img/traicamtrongtay.jpg" alt="" class="preview_gallery__pic"></button>
+            <button><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="preview_img"><img src="./img/cam.jpg" alt=""></div>
+            <div class="preview_info">
+            <h1>Cam</h1>
+            <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="preview_info__starnote">5 đánh giá</p>
+            <p class="preview_info__gia">20.000vnd/kg</p>
+            <hr>
+            <div class="preview_info__brand">
+                <p>Thương hiệu:</p>
+                <img src="./img/PsychoactiveWeeds.webp" alt="">
+                <p id="chiase--right">Chia sẻ:</p>
+                <button><i class="fa-brands fa-facebook"></i></button>
+                <button><i class="fa-brands fa-reddit"></i></button>
+                <button><i class="fa-brands fa-instagram"></i></button>
+                <button><i class="fa-brands fa-pinterest"></i></button>
+            </div>
+            <p class="preview_info__info">Cam ngọt (Citrus sinensis) là một loài thực vật có hoa trong họ Cửu lý hương. Loài này được (L.) Osbeck mô tả khoa học đầu tiên năm 1765.</p>
+            <hr>
+            <div class="preview_buy">
+                <div class="preview_buy__amount">
+                    <button><i class="fa-solid fa-plus"></i></button>
+                    <button id="numberedbutton"><span class="preview_buy__amount--number">5</span></button>
+                    <button><i class="fa-solid fa-minus"></i></button>
+                </div>
+                <div class="preview_buy__addtocart">
+                    <button>Thêm vào giỏ hàng <i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+                <div class="preview_buy__wishlist">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="preview_info__tag">
+            <p>Phân loại: Trái cây</p>
+            <p>Thẻ: Trái cây, Rau, Việt Nam, Xanh, Chay</p>
+            </div>
+        </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <br>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <br>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+</body>
+</html>

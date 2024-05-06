@@ -1,0 +1,418 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/chitietsanppham.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/chitietsanppham.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header__top">
+            <div class="location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <span class="location__text">Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.</span>
+            </div>
+
+            <div class="validation">
+                <a href="./signup.html" class="validation__register">Đăng ký</a>
+                <hr>
+                <a href="./login.html" class="validation__login">Đăng nhập</a>
+            </div>
+        </div>
+
+        <div class="header__center">
+            <a href="./homepage.html" class="logo">
+                <img class="logo__img" src="./img/plant 1.svg" alt="">
+                <span class="logo__text">ORGANIC SHOP</span>
+            </a>
+
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Tìm kiếm sản phẩm">
+                <button class="search-box__btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="wishlist-cart">
+                <a href="./wish-list.html"><i class="fa-regular fa-heart"></i></a>
+                <hr>
+                <a class="js-popup-ticket" href="#"><i class="js-popup-ticket fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="./homepage.html">Trang chủ</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./shop.html">Sản phẩm</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./bloglist.html">Bài viết</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./about.html">Giới thiệu</a>
+                    <hr>
+                </li>
+
+                <li>
+                    <a href="./contact.html">Liên hệ</a>
+                    <hr>
+                </li>
+            </ul>
+
+            <div class="phone">
+                <i class="fa-solid fa-phone-volume phone__icon"></i>
+                <span class="phone__number">0123456789</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="cart-popup-wrapper js-popup">
+        <div class="cart-popup js-popup-container">
+            <div class="cart-popup__up">
+                <div class="cart-popup__heading">
+                    <h2>Giỏ hàng</h2>
+                    <i class="fa-regular fa-x js-close-popup"></i>
+                </div>
+                
+                <div class="cart-popup__products">
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/cải thìa.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Cải thìa</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                    <div class="line"></div>
+                    <div class="cart-popup__product">
+                        <img class="cart-popup__product__img" src="./img/ot chuong do.png" alt="">
+                        <div class="cart-popup__product__info">
+                            <p>Ớt chuông đỏ</p>
+                            <p>
+                                <span class="product__weight">1kg x </span>
+                                <span class="product__price">10.000đ</span>
+                            </p>
+                        </div>
+                        <img class="cart-popup__product-close" src="./img/Close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-popup__footer">
+                <div class="cart-popup__footer__info">
+                    <div>2 sản phẩm</div>
+                    <div class="cart-popup__footer__price">20.000đ</div>
+                </div>
+                <button class="cart-popup__footer__checkout">Thanh toán</button> <br>
+                <button class="cart-popup__footer__cart">Xem giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="address-body">
+        <div class="nav-link">
+            <div class="nav-link-text">
+                <a href="./homepage.html"><i class="fa-solid fa-house"></i></a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a href="./shop.html">Sản phẩm</a>
+                <i class="right fa-solid fa-chevron-right"></i>
+                <a class="nav-link--selected" href="">Cam vàng</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Body shop 2-->
+    <div class="body">
+        <div class="addinfo">
+            <div class="addinfo_gallery">
+            <button class="addinfo_gallery__switchbutton" id="up_button"><i class="fa-solid fa-chevron-up"></i></button>
+            <img src="./img/cam.jpg" alt="" class="addinfo_gallery__pic selected" id="img_one">
+            <img src="./img/matcattraicam2.jpg" alt="" class="addinfo_gallery__pic" id="img_two">
+            <img src="./img/traicambirdeyeview.png" alt="" class="addinfo_gallery__pic" id="img_three"></button>
+            <img src="./img/traicamtrongtay.jpg" alt="" class="addinfo_gallery__pic" id="img_four"></button>
+            <button class="addinfo_gallery__switchbutton" id="down_button"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="addinfo_img"><img src="./img/cam.jpg" alt="" id="addinfo_img__image"></div>
+            <div class="addinfo_info">
+                <h1>Cam</h1>
+                <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote">5 đánh giá</p>
+                <p class="addinfo_info__gia">20.000vnd/kg</p>
+                <hr style="border: 1px solid #dbdbdb;">
+                <div class="addinfo_info__brand">
+                <p>Thương hiệu:</p>
+                <img src="./img/PsychoactiveWeeds.webp" alt="">
+                <p id="chiase--right">Chia sẻ:</p>
+                <button><i class="fa-brands fa-facebook"></i></button>
+                <button><i class="fa-brands fa-reddit"></i></button>
+                <button><i class="fa-brands fa-instagram"></i></button>
+                <button><i class="fa-brands fa-pinterest"></i></button>
+                </div>
+                <p class="addinfo_info__info">Cam ngọt (Citrus sinensis) là một loài thực vật có hoa trong họ Cửu lý hương. Loài này được (L.) Osbeck mô tả khoa học đầu tiên năm 1765.</p>
+                <hr style="border: 1px solid #dbdbdb;">
+                <div class="addinfo_buy">
+                    <div class="addinfo_buy__amount">
+                        <button id="addinfo_buy__amount--decrease"><i class="fa-solid fa-minus"></i></button>
+                        <span id="addinfo_buy__amount--number">0</span>
+                        <button id="addinfo_buy__amount--increase"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="addinfo_buy__addtocart">
+                        <button >Thêm vào giỏ hàng <i class="fa-solid fa-bag-shopping"></i></button>
+                    </div>
+                    <div class="addinfo_buy__wishlist">
+                        <button  ><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                </div>
+                <hr style="border: 1px solid #dbdbdb;">
+                <div class="addinfo_info__tag">
+                    <p>Phân loại: <span class="addinfo_info__tag--grey">Trái cây</span></p>
+                    <p>Thẻ: <span class="addinfo_info__tag--grey">Trái cây, Rau, Việt Nam, Xanh, Chay</span></p>
+                </div>
+            </div>            
+        </div>
+   
+        <div class="about">
+            <div class="about_button">
+                <button class="about_button__button" id="description__button" onclick="changeDescription()">Miêu tả</button>
+                <button class="about_button__button" id="comments__button" onclick="changeComments()">Bình luận</button>
+            </div>
+            <div class="about_section" id="zero">
+                <div class="description" id="one">
+                    <div class="description__text">
+                        <p>Cam là một loại quả của nhiều loài cây có múi khác nhau thuộc họ Cửu lý hương (Rutacea) (xem danh sách các loài thực vật được gọi là cam); nó chủ yếu đề cập đến Citrus × sinensis, mà còn được gọi là cam ngọt, để phân biệt với Citrus × aurantium có liên quan, được gọi là cam chua. Cam ngọt sinh sản vô tính (apomixis thông qua phôi nucellar); giống cam ngọt phát sinh do đột biến.</p>
+    
+                        <p>Cam là trái lai từ quả chanh và quả bưởi.Bộ gen lục lạp, và do đó là dòng ngoại, là bộ gen của bưởi. Quả cam ngọt đã có trình tự bộ gen đầy đủ.</p>
+                        <p>Cam có nguồn gốc ở một khu vực bao gồm Nam Trung Quốc, Đông Bắc Ấn Độ và Myanmar, và người ta nhắc đến cam ngọt sớm nhất trong văn học Trung Quốc vào năm 314 trước Công nguyên. Tính đến năm 1987, cây cam được coi là cây ăn quả được trồng nhiều nhất trên thế giới. Cây cam được trồng rộng rãi ở các vùng khí hậu nhiệt đới và cận nhiệt đới để cho quả ngọt. Quả của cây cam có thể ăn tươi hoặc chế biến lấy nước cốt hoặc vỏ thơm. Tính đến năm 2012, cam ngọt chiếm khoảng 70% sản lượng cam quýt.</p>
+                        <p>Mỗi 140g chứa:</p>
+                    <ul>
+                        <li>Calo: 66</li>
+                        <li>Vitamin C: 92% DV</li>
+                        <li>Tinh bột: 14.8g</li>
+                        <li>Đường: 12g</li>
+                        <li>Canxi: 5% DV</li>   
+                    </ul>
+                    </div>
+                    <div class="description__video">
+                        <iframe width="500" height="345" src="//www.youtube.com/embed/bPCPTUw3Oy4">
+                        </iframe>
+                        <div id="below_video">
+                            <div>
+                                <i class="fa-solid fa-tags"></i>
+                                <p>30% khuyến mãi</p>
+                            </div> 
+                            <div>
+                                <i class="fa-brands fa-pagelines"></i>
+                                <p>100% Hữu cơ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments" id="two">
+                    <div class="comment">
+                        <div>
+                        <img src="./img/bia.jpg" alt="" class="comment__profileimage">
+                        <p class="comment__username">Trần Thị Thu Phương</p>
+                        <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote"></p>
+                        </div>
+
+                        <p class="comment__content">Cam Ranh là một thành phố ven biển trực thuộc tỉnh Khánh Hòa, Việt Nam</p>
+                    </div>
+                    <div class="comment">
+                        <div>
+                        <img src="./img/gigacat.jpg" alt="" class="comment__profileimage">
+                        <p class="comment__username">Mai Thị Thảo</p>
+                        <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote"></p>
+                        </div>
+                        <p class="comment__content">CAM PU CHIA  💅🤝🙏💅💅💅💅</p>
+                    </div>
+                    <div class="comment">
+                        <div>
+                        <img src="./img/tranquoctoan.jpg" alt="" class="comment__profileimage">
+                        <p class="comment__username">Trần Quốc Toản</p>
+                        <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote"></p>
+                        </div>
+                        <p class="comment__content">Tôi đã bóp nát quả cam</p>
+                    </div>
+                    <div class="comment">
+                        <div>
+                        <img src="./img/leducnghia.jpg" alt="" class="comment__profileimage">
+                        <p class="comment__username">Lê Đức Nghĩa</p>
+                        <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote"></p>
+                        </div>
+                        <p class="comment__content">Cam ơn, aricamto gozai masu, sugoi, subarashii, sutekina, sussy baka.</p>
+                    </div>
+                    <button id="comments__loadbutton">Hiển thị thêm</button>
+                    <div class="comment" id="hidden_comment">
+                        <div>
+                        <img src="./img/sadboymuaha.jpg" alt="" class="comment__profileimage">
+                        <p class="comment__username">Sad boy mùa hạ</p>
+                        <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><p class="addinfo_info__starnote"></p>
+                        </div>
+                        <p class="comment__content">Anhe em ạ, bạn thân em đã chuyển hoàn toàn hệ thống tư tưởng của nó sang femboy giáo. </p>
+                        <p class="comment__content">hôm qua bọn em đang pvp minecraft và mỗi lần em đánh nó là mỗi lần nó ***; nó làm nhiều quá em bảo nó câm mẹ đi 
+                        nhưng mà thú thật em tự chấm mình 10 trong thang độ cứng Mohs. Nó bảo hi hi ok tao dừng đồ baka, ê nhìn nè. em thu nhỏ màn hình để xem cái gì thì lạy chúa yasuo nó đang stream ** *** bằng webcam 4k.
+                        đúng lúc bạn gái em bước vào, nhưng bằng phản xạ của một thằng nghiện game 12 năm(em cũng nghiện cocain nhưng mà nó không liên quan) em đã tắt màn hình rất nhanh. Nhưng mà bồ em vẫn thấy được nhờ vì nó cũng có phản xạ của con nghiện 
+                        (nó nghiện methamphetamine, nó không nghiện game), nó la lên rồi hỏi [data expunged][censored][censored][censored] rồi thằng bạn em nó hỏi ************** rồi bọn em chia tay rồi </p>
+                        <p class="comment__content">dạ em xin hỏi em có nên uhmmm... auughhummmm.... chuyển ngành sang kỹ sư khoan mỏ dầu??? Nó với em quen cũng lâu rồi 🧐😩🤔 các bác senpai cho xin chút ý kiến ạ </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="related_items">
+            <h2>Sản Phẩm Liên Quan</h2>
+            <div class="collage">
+                <div class="collage-pic">
+                    <a href="#"><img src="./img/anhdao.jpg" alt="" class="collage-pic__img"></a>
+                    <a href="#" class="collage-pic__name">Anh đào</a>
+                    <p>Giá: 20.000/kg</p>
+                    <div class="collage-pic__star">
+                    <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                    </div>
+                    <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+                    <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+                    <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+                <div class="collage-pic">
+                    <a href="#"><img src="./img/bo.jpg" alt="" class="collage-pic__img"></a>
+                    <a href="#" class="collage-pic__name">Bơ</a>
+                    <p>Giá: 15.000/quả</p>
+                    <div class="collage-pic__star">
+                    <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                    </div>
+                    <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+                    <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+                    <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+                <div class="collage-pic">
+                    <a href="#"><img src="./img/cam.jpg" alt="" class="collage-pic__img"></a>
+                    <a href="#" class="collage-pic__name">Cam</a>
+                    <p>Giá: 20.000/kg</p>
+                    <div class="collage-pic__star">
+                    <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                    </div>
+                    <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+                    <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+                    <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+                <div class="collage-pic">
+                    <a href="#"><img src="./img/chomchom.jpg" alt="" class="collage-pic__img"></a>
+                    <a href="#" class="collage-pic__name">Chôm chôm</a>
+                    <p>Giá: 20.000/kg</p>
+                    <div class="collage-pic__star">
+                    <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+                    </div>
+                    <button class="collage-pic__heart--hidden collage-pic__heart--visible"><i class="fa-solid fa-heart"></i></button>
+                    <button class="collage-pic__preview--hidden collage-pic__preview--visible" onclick="preview_popup.showModal()"><i class="fa-solid fa-eye"></i></button>
+                    <button class="collage-pic__bag"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__top">
+            <div class="box">
+                <a href="" class="logo">
+                    <img class="logo__img" src="./img/plant 1.svg" alt="">
+                    <span class="logo__text">ORGANIC SHOP</span>
+                </a>
+                <p class="contact-info">
+                    <span>0123456789</span> 
+                    hoặc 
+                    <span>abcd@gmail.com</span>
+                </p>
+                <div class="social-icon">
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Tài khoản của tôi</h2>
+                <ul>
+                    <li>Thông tin tài khoản</li>
+                    <li>Lịch sử đặt hàng</li>
+                    <li>Giỏ hàng</li>
+                    <li>Danh sách yêu thích</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Trợ giúp</h2>
+                <ul>
+                    <li>Liên lạc</li>
+                    <li>Điều khoản</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Hướng dẫn mua hàng</li>
+                </ul>
+            </div>
+    
+            <div class="box">
+                <h2 class="box__header">Danh mục</h2>
+                <ul>
+                    <li>Rau củ quả</li>
+                    <li>Trái cây</li>
+                    <li>Các loại hạt</li>
+                    <li>Nước ép rau củ</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2 class="box__header">Tải ứng dụng của chúng tôi</h2>
+                <div class="download">
+                    <a class="ggplay" href="">
+                        <i class="fa-brands fa-google-play ggplay__icon"></i>
+                        <div class="ggplay__text">
+                            <span>Tải xuống trên</span> <p>
+                            Google Play
+                        </div>
+                    </a>
+
+                    <a class="appstore" href="">
+                        <i class="fa-brands fa-apple appstore__icon"></i>
+                        <div class="appstore__text">
+                            <span>Tải xuống trên</span> <p>
+                            App Store
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div>© 2023 - Bản quyền thuộc về Organic Shop</div>
+        </div>
+    </footer>
+    <script src="./js/closePopup.js"></script>
+    <script src="./js/proceedToCheckout.js"></script>
+</body>
+</html>

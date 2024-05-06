@@ -1,0 +1,333 @@
+.single-blog {
+    display: flex;
+    height: fit-content;
+    padding: 0 160px;
+    font-size: 14px;
+    margin: 30px 0;
+    color: #1A1A1A;
+}
+
+.single-blog__box {
+    flex: 2.5;
+    margin-right: 10px;
+    position: relative;
+}
+
+.single-blog__box .primary_image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.single-blog__box .info {
+    display: flex;
+    margin: 7px 10px;
+    font-size: 12px;
+    color:#666666;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.single-blog__box .info i {
+    color: var(--primary-color);
+}
+
+.single-blog__box .user-acc {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.single-blog__box .user-acc__avatar {
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    height: 35px;
+    width: 35px;
+    padding-top: 8px;
+    padding-left: 10px;
+    background: #ccc;
+}
+
+.single-blog__box .user-acc__name {
+    font-weight: bold;
+    color: #1A1A1A;
+    font-size: 15px;
+}
+
+.single-blog__box .user-acc__day-up {
+    color: #666666;
+    font-size: 12px;
+}
+
+.single-blog__box .user-acc__social-icon {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.single-blog__box .user-acc__social-icon a{
+    color: #666666;
+    margin: 5px;
+    font-size: 22px;
+}
+
+.user-acc__social-icon a:hover{
+    color: var(--primary-color);
+}
+
+.single-blog__box .blog-content {
+    margin-top: 20px;
+}
+
+.single-blog__box .blog-content p{
+    font-size: 15px;
+    color: #808080;
+    margin: 15px 0;
+}
+
+.single-blog__box .blog-content__intro{
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+.single-blog__box .blog-content__img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-blog__box .blog-content__img img{
+    width: 48%;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.leave-comment {
+    margin-top: 30px;
+}
+
+.leave-comment input,
+.leave-comment__message {
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    outline: none;
+}
+
+.leave-comment input::placeholder,
+.leave-comment__message::placeholder {
+    color:  #B3B3B3;
+}
+
+.leave-comment__flex-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.leave-comment__flex-box input {
+    width: 49%;
+    height: 40px;
+    text-indent: 10px;
+}
+
+.leave-comment__message {
+    min-width: 100%;
+    max-width: 800px;
+    margin: 15px 0;
+    min-height: 100px;
+    text-indent: 10px;
+    padding: 10px 0;
+}
+
+.leave-comment__flex-box2 {
+    display: flex;
+}
+
+.leave-comment__flex-box2 p{
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-left: 5px;
+}
+
+.leave-comment__post-btn {
+    margin: 15px 0;
+    color: rgb(223, 239, 223);
+    border-radius: 18px;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 35px;
+    width: 150px;
+    height: 35px;
+}
+
+.leave-comment__post-btn:hover,
+.single-blog__box .comments .load-more-btn:hover{
+    background-color: rgb(223, 239, 223);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.single-blog__box .comments {
+    margin-top: 30px;
+}
+
+.single-blog__box .comment {
+    display: flex;
+    padding: 30px 0;
+}
+
+.single-blog__box .comment__avatar {
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    height: 34px;
+    width: 34px;
+    padding-top: 7px;
+    padding-left: 9px;
+    background: #ccc;
+    margin-right: 10px;
+}
+
+.single-blog__box .comment p {
+    color: #666;
+}
+
+.single-blog__box .comment__name-day span {
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+.single-blog__box .comments hr {
+    border: 1px solid #E6E6E6;
+}
+
+.single-blog__box .comments .load-more-btn {
+    margin: 15px 0;
+    color: rgb(223, 239, 223);
+    border-radius: 18px;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 35px;
+    width: 150px;
+    height: 35px;
+}
+
+.single-blog__filter {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.single-blog__filter .search {
+    border: 1px solid #E6E6E6;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-indent: 20px;
+    width: 100%;
+}
+
+.single-blog__filter .search::placeholder {
+    font-size: 14px;
+}
+
+.single-blog__filter .search-icon {
+    color: #999;
+    position: relative;
+    bottom: 23px;
+    left: 13px;
+}
+
+.single-blog__filter .top-categories,
+.single-blog__filter .popular-tag,
+.single-blog__filter .recently-added {
+    border-top: 1px solid #E6E6E6;
+    padding: 10px;
+}
+
+.top-categories div,
+.popular-tag div,
+.recently-added div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.top-categories__title,
+.popular-tag__title,
+.recently-added__title {
+    font-size: 20px;
+}
+
+.top-categories div .quantity{
+    float: right;
+    color: #666666;
+}
+
+.top-categories div .category:hover{
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popular-tag__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular-tag__list span {
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 5px 8px;
+    margin: 3px;
+    transition: background-color 0.25s, transform 0.2s;
+}
+
+.popular-tag__list span:not(.seleted-tag):hover {
+    transform: scale(1.03);
+    background-color: rgb(223, 239, 223);
+    cursor: pointer;
+}
+
+.popular-tag__list .seleted-tag {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.recently-added__flex-box {
+    display: flex;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recently-added__flex-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgb(223, 239, 223);
+    cursor: pointer;
+}
+
+.recently-added__blog-img {
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.recently-added__blog-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    position: absolute;
+    top: 2px;
+}
+
+.recently-added__blog-day {
+    color: #666666;
+    position: absolute;
+    bottom: 2px;
+    font-size: 12px;
+}
+
+.recently-added__blog-day .icon-day {
+    color: var(--primary-color);
+    margin-right: 5px;
+}

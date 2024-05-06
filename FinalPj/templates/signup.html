@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <title>Document</title>
+</head>
+<body class="body-signup">
+    <div class="signup-logo">
+        <a href="./homepage.html">
+            <img class="logo__img" src="./img/plant 1.svg" alt="">
+            <span class="logo__text">ORGANIC SHOP</span>
+        </a>
+    </div>
+    
+    <div class="formdk">
+        <form class="js-RegisterModal" action="">
+            <label for="" class="tieude-form">Đăng ký</label> 
+            <div class="auth-form__group">
+                <small></small>
+                <input id="email" type="email" placeholder="Email" class="formdk__lienlac"> 
+            </div> 
+            <div class="hoten-container auth-form__group">
+                <small></small>
+                <input type="text" name="" id="username" placeholder="Họ và Tên" class="formdk__inputhoten">
+            </div>
+            <div class="auth-form__group">
+                <small></small>
+                <input id="password" type="password" placeholder="Mật khẩu" class="formdk__taikhoan">
+            </div>
+            <div class="auth-form__group">
+                <small></small>
+                <input id="confirm-password" type="password" placeholder="Nhập lại mật khẩu" class="formdk__taikhoan"> 
+            </div>
+            <button type="submit">Tạo tài khoản</button> 
+            <p>Đã có tài khoản? <span class="login"> <a href="./login.html">Nhấp để đăng nhập</a></span></p>
+        </form>
+    </div>
+    <script src="./js/signup.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
